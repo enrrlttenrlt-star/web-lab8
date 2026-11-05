@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Dark mode: <html data-theme="dark"> үед ажиллана */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* Brand өнгө: bg-brand, text-brand, border-brand ... */
+@theme {
+  --color-brand: #1f4e9c;
+  --color-brand-dark: #173c78;
+  --color-brand-light: #8fb2f2;
+}

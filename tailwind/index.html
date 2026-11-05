@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зургийн цомог | Tailwind</title>
+  <link rel="stylesheet" href="output.css">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100">
+
+<header class="sticky top-0 z-50 border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-5 py-3">
+    <a href="#top" class="text-xl font-bold">Цомог<span class="text-amber-500">.</span></a>
+
+    <button id="navBtn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Цэс нээх"
+            class="rounded-lg border border-slate-300 px-3 py-2 md:hidden dark:border-slate-600">☰</button>
+
+    <nav id="menu" class="hidden w-full md:flex md:w-auto" aria-label="Үндсэн цэс">
+      <ul class="flex flex-col gap-2 py-2 md:flex-row md:items-center md:gap-6 md:py-0">
+        <li><a href="#gallery" class="font-semibold hover:text-brand dark:hover:text-brand-light">Галерей</a></li>
+        <li><a href="#contact" class="font-semibold hover:text-brand dark:hover:text-brand-light">Холбоо барих</a></li>
+        <li>
+          <button id="themeToggle" type="button" aria-pressed="false"
+                  class="rounded-lg border border-slate-300 px-3 py-1.5 text-sm dark:border-slate-600">
+            Харанхуй горим
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="px-5 py-14 text-center">
+    <h1 class="mx-auto max-w-3xl text-3xl font-bold md:text-5xl">Монголын байгалийг зургаан зургаар үзье</h1>
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Tailwind CSS v4 хувилбар.</p>
+    <a href="#gallery"
+       class="mt-6 inline-block rounded-full bg-brand px-7 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:bg-brand-dark dark:bg-brand-light dark:text-slate-900">
+      Цомог үзэх
+    </a>
+  </section>
+
+  <section id="gallery" class="mx-auto max-w-6xl px-5 py-12">
+    <h2 class="mb-6 text-2xl font-bold">Галерей</h2>
+    <ul class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+      <li>
+        <article class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md dark:bg-slate-800">
+          <img src="../img/photo1.jpg" alt="Монголын байгалийн зураг №1" loading="lazy" class="aspect-4/3 w-full object-cover">
+          <div class="flex flex-1 flex-col gap-2 p-5">
+            <h3 class="text-lg font-bold">Зураг 1</h3>
+            <p class="text-slate-600 dark:text-slate-300">Зургийн тухай богино тайлбар.</p>
+            <a href="#" class="mt-auto inline-block self-start rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white hover:bg-brand-dark dark:bg-brand-light dark:text-slate-900">Үзэх</a>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md dark:bg-slate-800">
+          <img src="../img/photo2.jpg" alt="Монголын байгалийн зураг №2" loading="lazy" class="aspect-4/3 w-full object-cover">
+          <div class="flex flex-1 flex-col gap-2 p-5">
+            <h3 class="text-lg font-bold">Зураг 2</h3>
+            <p class="text-slate-600 dark:text-slate-300">Зургийн тухай богино тайлбар.</p>
+            <a href="#" class="mt-auto inline-block self-start rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white hover:bg-brand-dark dark:bg-brand-light dark:text-slate-900">Үзэх</a>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md dark:bg-slate-800">
+          <img src="../img/photo3.jpg" alt="Монголын байгалийн зураг №3" loading="lazy" class="aspect-4/3 w-full object-cover">
+          <div class="flex flex-1 flex-col gap-2 p-5">
+            <h3 class="text-lg font-bold">Зураг 3</h3>
+            <p class="text-slate-600 dark:text-slate-300">Зургийн тухай богино тайлбар.</p>
+            <a href="#" class="mt-auto inline-block self-start rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white hover:bg-brand-dark dark:bg-brand-light dark:text-slate-900">Үзэх</a>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md dark:bg-slate-800">
+          <img src="../img/photo4.jpg" alt="Монголын байгалийн зураг №4" loading="lazy" class="aspect-4/3 w-full object-cover">
+          <div class="flex flex-1 flex-col gap-2 p-5">
+            <h3 class="text-lg font-bold">Зураг 4</h3>
+            <p class="text-slate-600 dark:text-slate-300">Зургийн тухай богино тайлбар.</p>
+            <a href="#" class="mt-auto inline-block self-start rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white hover:bg-brand-dark dark:bg-brand-light dark:text-slate-900">Үзэх</a>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md dark:bg-slate-800">
+          <img src="../img/photo5.jpg" alt="Монголын байгалийн зураг №5" loading="lazy" class="aspect-4/3 w-full object-cover">
+          <div class="flex flex-1 flex-col gap-2 p-5">
+            <h3 class="text-lg font-bold">Зураг 5</h3>
+            <p class="text-slate-600 dark:text-slate-300">Зургийн тухай богино тайлбар.</p>
+            <a href="#" class="mt-auto inline-block self-start rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white hover:bg-brand-dark dark:bg-brand-light dark:text-slate-900">Үзэх</a>
+          </div>
+        </article>
+      </li>
+
+      <li>
+        <article class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md dark:bg-slate-800">
+          <img src="../img/photo6.jpg" alt="Монголын байгалийн зураг №6" loading="lazy" class="aspect-4/3 w-full object-cover">
+          <div class="flex flex-1 flex-col gap-2 p-5">
+            <h3 class="text-lg font-bold">Зураг 6</h3>
+            <p class="text-slate-600 dark:text-slate-300">Зургийн тухай богино тайлбар.</p>
+            <a href="#" class="mt-auto inline-block self-start rounded-full bg-brand px-5 py-2 text-sm font-semibold text-white hover:bg-brand-dark dark:bg-brand-light dark:text-slate-900">Үзэх</a>
+          </div>
+        </article>
+      </li>
+
+    </ul>
+  </section>
+
+  <section id="contact" class="bg-slate-100 px-5 py-12 dark:bg-slate-800">
+    <div class="mx-auto max-w-xl">
+      <h2 class="mb-6 text-2xl font-bold">Холбоо барих</h2>
+
+      <form id="contactForm" novalidate class="group space-y-4">
+        <div>
+          <label for="name" class="mb-1 block font-semibold">Нэр</label>
+          <input id="name" type="text" required minlength="2"
+                 class="peer w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-900 group-data-validated:invalid:border-red-500">
+          <p class="mt-1 hidden text-sm text-red-600 dark:text-red-400 group-data-validated:peer-invalid:block">
+            Нэрээ 2-оос дээш тэмдэгтээр бичнэ үү.
+          </p>
+        </div>
+
+        <div>
+          <label for="email" class="mb-1 block font-semibold">Имэйл</label>
+          <input id="email" type="email" required
+                 class="peer w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-900 group-data-validated:invalid:border-red-500">
+          <p class="mt-1 hidden text-sm text-red-600 dark:text-red-400 group-data-validated:peer-invalid:block">
+            Зөв имэйл хаяг оруулна уу.
+          </p>
+        </div>
+
+        <div>
+          <label for="msg" class="mb-1 block font-semibold">Зурвас</label>
+          <textarea id="msg" rows="4" required minlength="10"
+                    class="peer w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-900 group-data-validated:invalid:border-red-500"></textarea>
+          <p class="mt-1 hidden text-sm text-red-600 dark:text-red-400 group-data-validated:peer-invalid:block">
+            Зурвас хамгийн багадаа 10 тэмдэгт байна.
+          </p>
+        </div>
+
+        <button type="submit"
+                class="rounded-full bg-brand px-7 py-3 font-bold text-white hover:bg-brand-dark dark:bg-brand-light dark:text-slate-900">
+          Илгээх
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-slate-200 py-6 text-center text-slate-600 dark:border-slate-700 dark:text-slate-400">
+  &copy; 2026 Зургийн цомог. Лаб 8: Tailwind.
+</footer>
+
+<script>
+  var form = document.getElementById('contactForm');
+  form.addEventListener('submit', function (e) {
+    form.dataset.validated = '';
+    if (!form.checkValidity()) e.preventDefault();
+  });
+
+  var navBtn = document.getElementById('navBtn');
+  var menu = document.getElementById('menu');
+  navBtn.addEventListener('click', function () {
+    var open = menu.classList.toggle('hidden') === false;
+    navBtn.setAttribute('aria-expanded', String(open));
+  });
+
+  var root = document.documentElement;
+  var btn = document.getElementById('themeToggle');
+  function sync() {
+    var dark = root.dataset.theme === 'dark';
+    btn.setAttribute('aria-pressed', String(dark));
+    btn.textContent = dark ? 'Гэрэл горим' : 'Харанхуй горим';
+  }
+  btn.addEventListener('click', function () {
+    var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    sync();
+  });
+  sync();
+</script>
+</body>
+</html>
