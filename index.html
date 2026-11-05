@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лаб 8: Bootstrap ба Tailwind</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 40px 20px; background: #f7f8fb; color: #14213d; }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { margin-bottom: 8px; }
+    p { color: #55607a; }
+    .grid { display: grid; gap: 16px; margin-top: 24px; }
+    @media (min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
+    a.card { display: block; padding: 24px; border-radius: 16px; background: #fff;
+             box-shadow: 0 4px 14px rgba(20,33,61,.1); text-decoration: none; color: inherit;
+             border: 2px solid transparent; }
+    a.card:hover, a.card:focus-visible { border-color: #1f4e9c; }
+    a.card h2 { margin: 0 0 6px; color: #1f4e9c; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Лаб 8: нэг хуудас, хоёр арга</h1>
+    <p>Зургийн цомгийн хуудсыг Bootstrap болон Tailwind-ээр бүтээсэн.</p>
+    <div class="grid">
+      <a class="card" href="bootstrap/"><h2>Bootstrap</h2><span>navbar, card grid, form validation</span></a>
+      <a class="card" href="tailwind/"><h2>Tailwind</h2><span>utility class, @theme, dark mode</span></a>
+    </div>
+  </main>
+</body>
+</html>
